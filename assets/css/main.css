@@ -1340,7 +1340,6 @@ input, select, textarea {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
-			justify-content: center;
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
@@ -1365,7 +1364,7 @@ input, select, textarea {
 					padding: 0 1.25rem 0 1.45rem;
 					text-transform: uppercase;
 					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
+					font-size: 0.7rem;
 					border-bottom: 0;
 				}
 
