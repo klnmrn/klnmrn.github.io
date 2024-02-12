@@ -1304,9 +1304,9 @@ input, select, textarea {
 
 		#header .logo img {
 			/* Styles for the image within the logo container */
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
+			max-width: 100%;
+			height: auto;
+			display: block;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
 		}
