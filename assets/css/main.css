@@ -1302,6 +1302,15 @@ input, select, textarea {
 				font-size: 2rem;
 			}
 
+		#header .logo img {
+			/* Styles for the image within the logo container */
+			width: 5.5rem;
+			height: 5.5rem;
+			line-height: 5.5rem;
+			border: solid 1px #ffffff;
+			border-radius: 100%;
+		}
+
 		#header .content {
 			border-style: solid;
 			border-color: #ffffff;
