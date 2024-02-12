@@ -9,7 +9,7 @@
                   "User Email: $visitor_email.\n".
                   "User Message: $message.\n";
                   
-    $to = "klnmrn@outlook.com";
+    $to = "mrnkln@outlook.com";
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $visitor_email \r\n";
     
