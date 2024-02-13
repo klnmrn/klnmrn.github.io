@@ -63,20 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
       modal.style.display = 'block';
     }
   
-    function closeModal() {
-      const modal = document.getElementById('modal');
-      modal.style.display = 'none';
-    }
-  
     // Add event listeners to the project thumbnails
     const projectThumbnails = document.getElementsByClassName('project-thumbnail');
-    for (let i = 0; i < projectThumbnails.length; i++) {
-        projectThumbnails[i].getElementsByTagName('a')[0].addEventListener('click', function(event) {
-        event.preventDefault();
-        const projectId = projectThumbnails[i].getAttribute('data-project-id');
-        openModal(projectId);
+    projectThumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener('click', (e) => {
+          e.preventDefault();
+          const projectId = thumbnail.getAttribute('href').substring(1);
+          openModal(projectId);
+        });
     });
-    }
 
 
     // Add event listener to the close button
@@ -87,4 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalBackground = document.getElementById('modal-background');
     modalBackground.addEventListener('click', closeModal);
 
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+    }
 });
