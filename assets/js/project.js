@@ -68,11 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
     projectThumbnails.forEach((thumbnail) => {
         thumbnail.addEventListener('click', (e) => {
           e.preventDefault();
-          const projectId = thumbnail.getAttribute('href').substring(1);
+          const projectId = thumbnail.getAttribute("data-project-id");
           openModal(projectId);
         });
     });
-
 
     // Add event listener to the close button
     const closeModalButton = document.getElementById('modal-close');
