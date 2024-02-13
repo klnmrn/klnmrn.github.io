@@ -2,14 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
   }
   
   .project-thumbnail {
-    width: 200px;
-    height: 200px;
+    width: calc(33.333% - 10px); /* Adjust the percentage based on the number of thumbnails per row */
+    height: auto; /* Set height to auto to maintain aspect ratio */
     overflow: hidden;
     cursor: pointer;
     border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Add some margin below each thumbnail */
   }
   
   .project-thumbnail img {
