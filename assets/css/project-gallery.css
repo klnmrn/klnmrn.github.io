@@ -42,7 +42,6 @@
   }
   
   .project-thumbnail:hover .overlay {
-    height: 100%; /* Show overlay on hover */
     opacity: 1;
   }
   
