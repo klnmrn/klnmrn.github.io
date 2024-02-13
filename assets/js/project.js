@@ -71,17 +71,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listeners to the project thumbnails
     const projectThumbnails = document.getElementsByClassName('project-thumbnail');
     for (let i = 0; i < projectThumbnails.length; i++) {
-      projectThumbnails[i].addEventListener('click', function() {
+        projectThumbnails[i].getElementsByTagName('a')[0].addEventListener('click', function(event) {
+        event.preventDefault();
         const projectId = projectThumbnails[i].getAttribute('data-project-id');
         openModal(projectId);
-      });
+    });
     }
-  
+
+
     // Add event listener to the close button
     const closeModalButton = document.getElementById('modal-close');
     closeModalButton.addEventListener('click', closeModal);
-  
+
     // Add event listener to the modal background
     const modalBackground = document.getElementById('modal-background');
     modalBackground.addEventListener('click', closeModal);
-  });
+
+});
