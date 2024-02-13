@@ -15,7 +15,7 @@ function openModal(projectId) {
         modalTitle.textContent = 'Project 1';
         modalDescription.textContent = 'Project 1 description';
         modalImage.src = 'path/to/project1/image.jpg';
-        modalLink1.href = 'https://project1.com';
+        modalLink1.href = 'https://github.com/klnmrn/urbanroadsafety';
         modalLink2.href = ''; // Optional, may be empty or not needed
         break;
       case 'project2':
