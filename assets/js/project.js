@@ -55,20 +55,21 @@ function openModal(projectId) {
         break;
     }
   
+    // Show the modal
     modal.style.display = 'block';
-  }
-  
-  function closeModal() {
-    const modal = document.getElementById('modal');
+}
+
+
+// Close the modal when the user clicks on the close button or outside the modal
+const closeModalButton = document.getElementById('modal-close');
+closeModalButton.addEventListener('click', function() {
+  const modal = document.getElementById("modal");
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById("modal");
+  if (event.target == modal) {
     modal.style.display = 'none';
   }
-  
-  // Add event listeners to the close button and the modal background
-  const close = document.getElementsByClassName('close')[0];
-  close.onclick = closeModal;
-  const modalBackground = document.querySelector('.modal');
-  modalBackground.onclick = function (event) {
-    if (event.target === modalBackground) {
-      closeModal();
-    }
-  };
+});
