@@ -11,6 +11,7 @@
     display: inline-block;
     width: calc(50% - 10px);
     margin-bottom: 10px;
+    text-decoration: none;
   }
   
   .project-thumbnail img {
@@ -42,6 +43,7 @@
   
   .project-thumbnail:hover .overlay {
     height: 100%; /* Show overlay on hover */
+    opacity: 1;
   }
   
   .text {
