@@ -12,11 +12,11 @@ function openModal(projectId) {
   
     switch (projectId) {
       case 'project1':
-        modalTitle.textContent = 'Project 1';
+        modalTitle.textContent = "Road safety of vulnerable";
         modalDescription.textContent = 'Project 1 description';
-        modalImage.src = 'path/to/project1/image.jpg';
+        modalImage.src = 'images/Marina.png';
         modalLink1.href = 'https://github.com/klnmrn/urbanroadsafety';
-        modalLink2.href = ''; // Optional, may be empty or not needed
+        modalLink2.href = 'https://github.com/klnmrn/urbanroadsafety'; // Optional, may be empty or not needed
         break;
       case 'project2':
         modalTitle.textContent = 'Project 2';
