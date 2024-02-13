@@ -65,6 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Add event listeners to the project thumbnails
     const projectThumbnails = document.getElementsByClassName('project-thumbnail');
+
+    // Convert the HTMLCollection to an Array
+    const projectThumbnailsArray = Array.from(projectThumbnails);
+
     projectThumbnails.forEach((thumbnail) => {
         thumbnail.addEventListener('click', (e) => {
           e.preventDefault();
