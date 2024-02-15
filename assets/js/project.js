@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
         case 'project1':
           modalTitle.textContent = "Project 1";
           modalDescription.textContent = 'Project 1 description';
-          modalImage.src = 'images/Marina.png';
-          modalLink1.href = 'https://github.com/klnmrn/urbanroadsafety';
+          modalImage.src = 'path/to/project1/image.jpg';
+          modalLink1.href = 'https://project1.com';
           modalLink2.href = ''; // Optional, may be empty or not needed
           break;
         case 'project2':
@@ -69,13 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Convert the HTMLCollection to an Array
     const projectThumbnailsArray = Array.from(projectThumbnails);
 
-    projectThumbnails.forEach((thumbnail) => {
-        thumbnail.addEventListener('click', (e) => {
-          e.preventDefault();
-          const projectId = thumbnail.getAttribute("data-project-id");
-          openModal(projectId);
-        });
-    });
+    for (let i = 0; i < projectThumbnails.length; i++) {
+      projectThumbnails[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        const projectId = this.getAttribute("data-project-id");
+        const projectTitle = this.querySelector('.text').innerText;
+        showModal(projectId, projectTitle);
+      });
+    }
 
     // Add event listener to the close button
     const closeModalButton = document.getElementById('modal-close');
