@@ -1,10 +1,7 @@
 .project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    column-count: 2; /* Add this line */
-    column-gap: 20px; /* Add this line */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-gap: 10px;
   }
   
   .project-thumbnail {
@@ -13,7 +10,7 @@
     margin-bottom: 10px;
     text-decoration: none; */
     width: 100%; /* Adjust the percentage based on the number of thumbnails per row */
-    height: 100%;
+    height: auto;
     padding-bottom: 48%; /* Set the aspect ratio to 1:1 */
     overflow: hidden;
     cursor: pointer;
