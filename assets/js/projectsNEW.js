@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
     switch (project) {
         case 'project1':
-            projectTitle.textContent = 'Urban Road Safety Research';
-            projectImage.src = 'images/Marina.png';
+            projectTitle.textContent = 'Project 1';
+            projectImage.src = 'project1-image.jpg';
             projectDescription.textContent = 'Description for Project 1.';
             break;
         case 'project2':
@@ -57,13 +57,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   
-  function openModal() {
-    document.getElementById('modal').style.display = 'flex';
-  }
-  
-  function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-  }
+    // JavaScript functions for the modal
+    function openModal() {
+        document.getElementById('modal').style.display = 'flex';
+        // Add event listener to close the modal on background click
+        document.getElementById('modal').addEventListener('click', closeModalOnBackgroundClick);
+    }
+    
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        // Remove event listener when modal is closed
+        document.getElementById('modal').removeEventListener('click', closeModalOnBackgroundClick);
+    }
+    
+    function closeModalOnBackgroundClick(event) {
+        // Close the modal only if the click is on the modal background, not on the modal content
+        if (event.target.id === 'modal') {
+        closeModal();
+        }
+    }
 
 });
   
