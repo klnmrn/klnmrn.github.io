@@ -75,14 +75,13 @@
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(27, 31, 34, 0.85);
+  top: 30%;
+  left: 30%;
+  width: 60%;
+  height: 50%;
+  background-color: rgba(13, 15, 16, 0.85);
   justify-content: center;
   align-items: center;
-  overflow: auto;
   z-index: 10000; /* Ensure modal is on top of other content */
 }
 
@@ -91,10 +90,13 @@
   padding: 20px;
   border: 1px solid #888;
   max-width: 600px;
+  width: calc(100% - 200px);
+  height: auto;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
+  box-sizing: border-box;
   transform: translate(-50%, -50%);
 }
 

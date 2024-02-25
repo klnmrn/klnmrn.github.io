@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         case 'project1':
             projectTitle.textContent = 'Project 1';
             projectImage.src = 'project1-image.jpg';
-            projectDescription.textContent = 'Description for Project 1.';
+            projectDescription.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor purus non enim praesent elementum facilisis leo. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Mi proin sed libero enim sed faucibus turpis in eu. Mauris vitae ultricies leo integer. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Et leo duis ut diam quam nulla. Elit ullamcorper dignissim cras tincidunt lobortis feugiat. Donec ac odio tempor orci dapibus ultrices. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Sed risus ultricies tristique nulla aliquet enim. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Consequat id porta nibh venenatis cras. Nisl suscipit adipiscing bibendum est ultricies integer quis. Viverra suspendisse potenti nullam ac tortor vitae purus. Ridiculus mus mauris vitae ultricies leo. Lectus magna fringilla urna porttitor rhoncus dolor.';
             break;
         case 'project2':
             projectTitle.textContent = 'Project 2';
@@ -64,18 +64,20 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('modal').addEventListener('click', closeModalOnBackgroundClick);
     }
     
-    function closeModal() {
-        document.getElementById('modal').style.display = 'none';
-        // Remove event listener when modal is closed
-        document.getElementById('modal').removeEventListener('click', closeModalOnBackgroundClick);
-    }
-    
     function closeModalOnBackgroundClick(event) {
         // Close the modal only if the click is on the modal background, not on the modal content
         if (event.target.id === 'modal') {
         closeModal();
         }
     }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('modal').removeEventListener('click', closeModalOnBackgroundClick);
+      
+        // Update the URL hash to go back to the #projects section
+        window.location.hash = 'projects';
+      }
 
 });
   
