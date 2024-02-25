@@ -77,7 +77,38 @@
 								<!-- Project Gallery -->
 								<div class="project-gallery row">
 
-									<div class="portfolio-item col-4">
+									<div class="project" data-project="project1" onclick="loadProjectDetails('project1')">
+											<img src="project1-thumbnail.jpg" alt="Project 1">
+											<h3>Project 1</h3>
+									</div>
+
+									<div class="project" data-project="project2" onclick="loadProjectDetails('project2')">
+										<img src="project2-thumbnail.jpg" alt="Project 2">
+										<h3>Project 2</h3>
+									</div>
+
+									<div class="project" data-project="project3" onclick="loadProjectDetails('project3')">
+										<img src="project3-thumbnail.jpg" alt="Project 3">
+										<h3>Project 3</h3>
+									</div>
+
+									<div class="project" data-project="project4" onclick="loadProjectDetails('project4')">
+										<img src="project4-thumbnail.jpg" alt="Project 4">
+										<h3>Project 4</h3>
+									</div>
+
+									<div class="project" data-project="project5" onclick="loadProjectDetails('project5')">
+										<img src="project5-thumbnail.jpg" alt="Project 5">
+										<h3>Project 5</h3>
+									</div>
+
+									<div class="project" data-project="project6" onclick="loadProjectDetails('project6')">
+										<img src="project6-thumbnail.jpg" alt="Project 6">
+										<h3>Project 6</h3>
+									</div>
+
+
+								<!--<div class="portfolio-item col-4">
 										<a class="portfolio-link" data-toggle="modal" href="#project1" target="_blank">
 											<div class="portfolio-hover">
 												<div class="portfolio-hover-content">
@@ -141,9 +172,9 @@
 											</div>								
 											<img class="img-fluid" src="path/to/project6/thumbnail.jpg" alt="">								
 										</a>								
-									</div>
+									</div>-->
 								</div>
-
+									
 							</article>
 							
 
@@ -375,7 +406,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 			<div id="modal-background" class="modal-background"></div>
 
-			<div id="project1" class="modal">
+			<div id="modalContent">
+				<h2 id="projectTitle"></h2>
+				<img id="projectImage" src="" alt="">
+				<p id="projectDescription"></p>
+				<!-- Add any additional details you want to display -->
+			</div>
+
+		<!--<div id="project1" class="modal">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -394,7 +432,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			
 		<!-- BG -->
 			<div id="bg"></div>
@@ -405,8 +443,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/project.js"></script>
-			<script src="assets/js/portfolio.js"></script>
+			<script src="assets/js/projects.js"></script>
+			<!--<script src="assets/js/portfolio.js"></script>-->
 
 	</body>
 
