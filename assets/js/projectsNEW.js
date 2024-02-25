@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   
-        // JavaScript functions for the modal
+    // JavaScript functions for the modal
     function openModal() {
         document.getElementById('modal').style.display = 'flex';
         // Add event listener to close the modal on background click
@@ -76,9 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
         closeModal();
         }
     }
-    
-    function closeX() {
-        closeModal();
 
 });
   
