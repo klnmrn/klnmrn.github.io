@@ -83,7 +83,7 @@
   justify-content: center;
   align-items: center;
   overflow: auto;
-  z-index: 1000; /* Ensure modal is on top of other content */
+  z-index: 10000; /* Ensure modal is on top of other content */
 }
 
 .modalContent {
