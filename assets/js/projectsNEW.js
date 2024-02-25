@@ -67,14 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
         document.getElementById('modal').removeEventListener('click', closeModalOnBackgroundClick);
-        // Add logic to navigate back to #projects section
-        window.location.href = '#projects';
-    }
-
-    function closeModalOnBackgroundClick(event) {
-        if (event.target.id === 'modal') {
-          closeModal();
-        }
+        
+        // Navigate back to #projects section
+        window.location.hash = 'projects';
     }
 
 });
