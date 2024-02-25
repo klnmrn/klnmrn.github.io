@@ -1,15 +1,3 @@
-// Function to open the modal
-function openModal() {
-    document.getElementById('modal').style.display = 'block';
-  }
-  
-  // Function to close the modal
-  function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-    // Clear modal content when closing
-    document.getElementById('modalContent').innerHTML = '';
-  }
-
 function loadProjectDetails(project) {
     openModal();
 
@@ -57,11 +45,4 @@ function loadProjectDetails(project) {
     }
 }
 
-// Event listener to handle project clicks and load details into the modal
-document.getElementById('content').addEventListener('click', function(e) {
-    if (e.target.classList.contains('project')) {
-      const projectName = e.target.dataset.project;
-      loadProjectDetails(projectName);
-    }
-  });
   
