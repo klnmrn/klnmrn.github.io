@@ -1,14 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Event listener to handle project clicks and load details into the modal
-    document.getElementById('projects').addEventListener('click', function(e) {
-      const projectElement = e.target.closest('.project');
-  
-      if (projectElement) {
-        const projectName = projectElement.dataset.project;
-        loadProjectDetails(projectName);
-      }
-    });
-  
   function loadProjectDetails(project) {
     openModal();
   
@@ -62,6 +51,4 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeModal() {
     document.getElementById('modal').style.display = 'none';
   }
-
-});
   
