@@ -3,12 +3,22 @@ function openModal() {
     document.getElementById('modal').style.display = 'block';
   }
   
-  // Function to close the modal
-  function closeModal() {
+// Function to close the modal
+function closeModal() {
     document.getElementById('modal').style.display = 'none';
     // Clear modal content when closing
     document.getElementById('modalContent').innerHTML = '';
   }
+
+// Event listener to handle project clicks and load details into the modal
+document.getElementById('projects').addEventListener('click', function(e) {
+    const projectElement = e.target.closest('.project');
+  
+    if (projectElement) {
+      const projectName = projectElement.dataset.project;
+      loadProjectDetails(projectName);
+    }
+  });
 
 function loadProjectDetails(project) {
     openModal();
@@ -56,12 +66,5 @@ function loadProjectDetails(project) {
             break;
     }
 }
-
-// Event listener to handle project clicks and load details into the modal
-document.getElementById('projects').addEventListener('click', function(e) {
-    if (e.target.closest('.project')) {
-      const projectName = e.target.closest('.project').dataset.project;
-      loadProjectDetails(projectName);
-    }
-  });
+  
   
