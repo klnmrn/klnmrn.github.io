@@ -79,26 +79,32 @@
 
 									<div class="project" id="project1" data-project="project1" >
 										<img src="project1-thumbnail.jpg" alt="Project 1">
+										<h3 onclick="loadProjectDetails('project1')">Project 1</h3>
 									</div>
 
 									<div class="project" id="project2" data-project="project2" >
 										<img src="project2-thumbnail.jpg" alt="Project 2">
+										<h3 onclick="loadProjectDetails('project2')">Project 2</h3>
 									</div>
 
 									<div class="project" id="project3" data-project="project3" >
 										<img src="project3-thumbnail.jpg" alt="Project 3">
+										<h3 onclick="loadProjectDetails('project3')">Project 3</h3>
 									</div>
 
 									<div class="project" id="project4" data-project="project4" >
 										<img src="project4-thumbnail.jpg" alt="Project 4">
+										<h3 onclick="loadProjectDetails('project4')">Project 4</h3>
 									</div>
 
 									<div class="project" id="project5" data-project="project5" >
 										<img src="project5-thumbnail.jpg" alt="Project 5">
+										<h3 onclick="loadProjectDetails('project5')">Project 5</h3>
 									</div>
 
 									<div class="project" id="project6" data-project="project6" >
 										<img src="project6-thumbnail.jpg" alt="Project 6">
+										<h3 onclick="loadProjectDetails('project6')">Project 6</h3>
 									</div>
 
 
@@ -444,14 +450,12 @@
 
 			<div id="modal-background" class="modal-background"></div>
 
-			<div id="modal" class="modal">
-				<!-- Modal content goes here -->
-				<span class="close" onclick="closeModal()">&times;</span>
-				<div id="modalContent">
+			<div id="modal" class="modal" onclick="closeModal()">
+				<div id="modalContent" onclick="event.stopPropagation()">
+					<span class="close" onclick="closeModal()">&times;</span>
 					<h2 id="projectTitle"></h2>
 					<img id="projectImage" src="" alt="">
 					<p id="projectDescription"></p>
-					<!-- Add any additional details you want to display -->
 				</div>
 			</div>
 			
