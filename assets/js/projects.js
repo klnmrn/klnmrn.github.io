@@ -58,9 +58,9 @@ function loadProjectDetails(project) {
 }
 
 // Event listener to handle project clicks and load details into the modal
-document.getElementById('content').addEventListener('click', function(e) {
-    if (e.target.classList.contains('project')) {
-      const projectName = e.target.dataset.project;
+document.getElementById('projects').addEventListener('click', function(e) {
+    if (e.target.closest('.project')) {
+      const projectName = e.target.closest('.project').dataset.project;
       loadProjectDetails(projectName);
     }
   });
