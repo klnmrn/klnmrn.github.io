@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Attach click event listeners to each project
-    document.querySelectorAll('.project').forEach(function (project) {
-      project.addEventListener('click', function () {
-        const projectName = project.dataset.project;
+    // Attach a click event listener to the parent container
+    document.getElementById('projects').addEventListener('click', function (e) {
+      // Check if the clicked element has the 'project' class
+      const projectElement = e.target.closest('.project');
+  
+      if (projectElement) {
+        // If it does, get the data-project attribute and load details
+        const projectName = projectElement.dataset.project;
         loadProjectDetails(projectName);
-      });
+      }
     });
   
   function loadProjectDetails(project) {
