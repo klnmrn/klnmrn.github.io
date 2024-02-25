@@ -17,7 +17,7 @@ document.getElementById('projects').addEventListener('click', function(e) {
   
     switch (project) {
         case 'project1':
-            projectTitle.textContent = 'Project 1';
+            projectTitle.textContent = 'Urban Road Safety Research';
             projectImage.src = 'project1-image.jpg';
             projectDescription.textContent = 'Description for Project 1.';
             break;
