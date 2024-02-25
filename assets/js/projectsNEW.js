@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     switch (project) {
         case 'project1':
             projectTitle.textContent = 'Urban Road Safety Research';
-            projectImage.src = 'project1-image.jpg';
+            projectImage.src = 'images/Marina.png';
             projectDescription.textContent = 'Description for Project 1.';
             break;
         case 'project2':
