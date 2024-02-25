@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   
-        // JavaScript functions for the modal
+    // JavaScript functions for the modal
     function openModal() {
         document.getElementById('modal').style.display = 'flex';
         // Add event listener to close the modal on background click
@@ -66,10 +66,15 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
+        // Remove event listener when modal is closed
         document.getElementById('modal').removeEventListener('click', closeModalOnBackgroundClick);
-        
-        // Navigate back to #projects section
-        window.location.hash = 'projects';
+    }
+    
+    function closeModalOnBackgroundClick(event) {
+        // Close the modal only if the click is on the modal background, not on the modal content
+        if (event.target.id === 'modal') {
+        closeModal();
+        }
     }
 
 });
