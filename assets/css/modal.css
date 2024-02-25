@@ -1,4 +1,4 @@
-.modal {
+/*.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -46,6 +46,7 @@
     display: flex;
     justify-content: space-between;
   }
+*/
 
 /* Styles for projects */
 #projects {
@@ -81,7 +82,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 1; /* Ensure modal is on top of other content */
 }
 
 .modalContent {
