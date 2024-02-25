@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Event listener to handle project clicks and load details into the modal
-    document.getElementById('projects').addEventListener('click', function (e) {
-      const projectElement = e.target.closest('.project');
-  
-      if (projectElement) {
-        const projectName = projectElement.dataset.project;
+    // Attach click event listeners to each project
+    document.querySelectorAll('.project').forEach(function (project) {
+      project.addEventListener('click', function () {
+        const projectName = project.dataset.project;
         loadProjectDetails(projectName);
-      }
+      });
     });
   
   function loadProjectDetails(project) {
