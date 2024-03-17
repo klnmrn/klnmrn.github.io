@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Update the hash to navigate to #projects
       setTimeout(() => {
-        window.location.href = '#projects';
+        window.location.href = 'index.html#projects';
       }, 100);
     }
   });
