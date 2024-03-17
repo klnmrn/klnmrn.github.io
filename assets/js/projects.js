@@ -1,70 +1,62 @@
-// Function to open the modal
-function openModal() {
-    document.getElementById('modal').style.display = 'block';
-  }
+document.addEventListener('DOMContentLoaded', function () {
+    // Attach a click event listener to the parent container
+    const projectList = document.querySelector('.project-list');
+    projectList.addEventListener('click', function (e) {
+      // Check if the clicked element has the 'portfolio-item' class
+      const projectItem = e.target.closest('.project-item');
   
-// Function to close the modal
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-    // Clear modal content when closing
-    document.getElementById('modalContent').innerHTML = '';
-  }
-
-// Event listener to handle project clicks and load details into the modal
-document.getElementById('projects').addEventListener('click', function(e) {
-    const projectElement = e.target.closest('.project');
+      if (projectItem) {
+        // If it does, get the data-project attribute and toggle the active class
+        const projectName = projectItem.querySelector('a').getAttribute('href').slice(1);
+        toggleProjectDetails(projectName);
+      }
+    });
   
-    if (projectElement) {
-      const projectName = projectElement.dataset.project;
-      loadProjectDetails(projectName);
-    }
-  });
+    function toggleProjectDetails(project) {
+      // Get the active project element
+      const activeProject = document.querySelector('.project-details.active');
 
-function loadProjectDetails(project) {
-    openModal();
-
-    // Get references to HTML elements inside the modalContent
-    const projectTitle = document.getElementById('projectTitle');
-    const projectImage = document.getElementById('projectImage');
-    const projectDescription = document.getElementById('projectDescription');
-
-    // Use a switch statement to populate details based on the clicked project
-    switch (project) {
-        case 'project1':
-            projectTitle.textContent = 'Project 1';
-            projectImage.src = 'project1-image.jpg';
-            projectDescription.textContent = 'Description for Project 1.';
-            break;
-        case 'project2':
-            projectTitle.textContent = 'Project 2';
-            projectImage.src = 'project2-image.jpg';
-            projectDescription.textContent = 'Description for Project 2.';
-            break;
-        case 'project3':
-            projectTitle.textContent = 'Project 3';
-            projectImage.src = 'project3-image.jpg';
-            projectDescription.textContent = 'Description for Project 3.';
-            break;
-        case 'project4':
-            projectTitle.textContent = 'Project 4';
-            projectImage.src = 'project4-image.jpg';
-            projectDescription.textContent = 'Description for Project 4.';
-            break;
-        case 'project5':
-            projectTitle.textContent = 'Project 5';
-            projectImage.src = 'project5-image.jpg';
-            projectDescription.textContent = 'Description for Project 5.';
-            break;
-        case 'project6':
-            projectTitle.textContent = 'Project 6';
-            projectImage.src = 'project6-image.jpg';
-            projectDescription.textContent = 'Description for Project 6.';
-            break;
-        // Repeat the above block for projects 2 to 6, updating case statements
-        default:
-            // Handle default case or do nothing
-            break;
-    }
-}
+      if (activeProject) {
+        // If there is an active project, remove the active class
+        activeProject.classList.remove('active');
+      }
   
-  
+      // Toggle the active class on the selected project
+      const projectElement = document.getElementById(project);
+
+      // Check if the project element is part of the same origin as the script
+      if (projectElement.ownerDocument.defaultView === window) {
+        projectElement.classList.toggle('active');
+      } else {
+        // If the project element is from a different origin, log a warning message
+        console.warn('The project element is from a different origin.');
+      }
+      
+      const baseUrl = window.location.origin;
+      const currentUrl = window.location.href;
+      
+      if (currentUrl.includes('#')) {
+        // If the current URL contains a project hash, update the URL to index.html#projects
+        window.history.replaceState(null, null, `${baseUrl}/#projects`);
+      } else {
+        // If it doesn't, update the URL to index.html#projects
+        window.history.replaceState(null, null, `${baseUrl}/#${project}`);
+      }}
+
+    const closeButtons = document.querySelectorAll('.project-details .close');
+
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        // Prevent the default behavior of closing the active modal
+        event.stopPropagation();
+        
+        // Scroll to the projects list
+        const projectListElement = document.querySelector('#projects'); 
+        projectListElement.scrollIntoView({ behavior: 'smooth' });
+
+        // Navigate to #projects
+        window.location.href = '#projects';
+      });
+    });
+});
