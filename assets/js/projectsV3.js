@@ -64,7 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
       /////window.history.pushState(null, null, `${baseUrl}#projects`);
 
       // Update the hash to navigate to #projects
-      window.location.hash = 'projects';
+      setTimeout(() => {
+        window.location.href = 'index.html#projects';
+      }, 100);
     }
   });
 });
