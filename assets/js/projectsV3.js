@@ -34,16 +34,16 @@ document.addEventListener('DOMContentLoaded', function () {
         console.warn('The project element is from a different origin.');
       }
       
-      //const baseUrl = window.location.origin;
-      //const currentUrl = window.location.href;
+      const baseUrl = window.location.origin;
+      const currentUrl = window.location.href;
       
-      //if (currentUrl.includes('#')) {
+      if (currentUrl.includes('#')) {
         // If the current URL contains a project hash, update the URL to index.html#projects
-      //  window.history.replaceState(null, null, `${baseUrl}/#projects`);
-      //} else {
+        window.history.replaceState(null, null, `${baseUrl}/#projects`);
+      } else {
         // If it doesn't, update the URL to index.html#projects
-      //  window.history.replaceState(null, null, `${baseUrl}/#${project}`);
-      }
+        window.history.replaceState(null, null, `${baseUrl}/#${project}`);
+      }}
 
   document.addEventListener('click', function (event) {
     const activeProject = document.querySelector('.project-details.active');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
       /////window.history.pushState(null, null, `${baseUrl}#projects`);
 
       // Update the hash to navigate to #projects
-      //window.location.hash = 'projects';
+      window.location.hash = 'projects';
     }
   });
 });
