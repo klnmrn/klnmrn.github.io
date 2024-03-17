@@ -1,8 +1,6 @@
 # Homepage
 
-This repository gives the code for my online homepage. You can visit at:
-
-[klnmrn.github.io](http://klnmrn.github.io/)
+This repository gives the code for my online homepage. You can visit at: [klnmrn.github.io](http://klnmrn.github.io/)
 
 > Last modified on 2023-03-17
 
