@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // Toggle the active class on the selected project
       const projectElement = document.getElementById(project);
-
-      ///////projectElement.classList.toggle('active');
+      //////projectElement.classList.toggle('active');
 
       // Check if the project element is part of the same origin as the script
       if (projectElement.ownerDocument.defaultView === window) {
@@ -45,18 +44,39 @@ document.addEventListener('DOMContentLoaded', function () {
         window.history.replaceState(null, null, `${baseUrl}/#${project}`);
       }}
 
-  document.addEventListener('click', function (event) {
-    const activeProject = document.querySelector('.project-details.active');
+    const closeButtons = document.querySelectorAll('.project-details .close');
 
-    if (event.target.classList.contains('close') && !activeProject.contains(event.target)) {
-      event.preventDefault();
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        // Prevent the default behavior of closing the active modal
+        event.stopPropagation();
+        
+        // Scroll to the projects list
+        const projectListElement = document.querySelector('#projects'); 
+        projectListElement.scrollIntoView({ behavior: 'smooth' });
+
+        // Navigate to index.html#projects
+        window.location.href = 'index.html#projects';
+      });
+    });
+
+
+
+
+
+//  document.addEventListener('click', function (event) {
+//    const activeProject = document.querySelector('.project-details.active');
+
+//    if (event.target.classList.contains('close') && !activeProject.contains(event.target)) {
+//      event.preventDefault();
 
       // Prevent the default behavior of closing the active modal
-      event.stopPropagation();
+//      event.stopPropagation();
 
       // Scroll to the projects list
-      const projectListElement = document.querySelector('#projects'); 
-      projectListElement.scrollIntoView({ behavior: 'smooth' });
+//      const projectListElement = document.querySelector('#projects'); 
+//      projectListElement.scrollIntoView({ behavior: 'smooth' });
 
       // Update the URL to the base URL with the '#projects' hash
 
@@ -64,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
       /////window.history.pushState(null, null, `${baseUrl}#projects`);
 
       // Update the hash to navigate to #projects
-      setTimeout(() => {
-        window.location.href = 'index.html#projects';
-      }, 100);
-    }
-  });
+//      setTimeout(() => {
+//        window.location.href = 'index.html#projects';
+//      }, 100);
+//    }
+//  });
 });
