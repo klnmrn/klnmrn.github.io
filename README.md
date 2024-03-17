@@ -1,9 +1,10 @@
-# Homepage
+# Personal Website
 
-This repository gives the code for my online homepage. You can visit at: [klnmrn.github.io](http://klnmrn.github.io/)
+This repository gives the code for my personal website. You can visit it at: [klnmrn.github.io](http://klnmrn.github.io/)
 
-> Last modified on 2023-03-17
+> Last modified on 2024-03-17
 
+I used one of the free HTML5 UP templates, but with a few modifications on the project page in order to showcase better my work. I hope you'll like it!
 
 ---
 
