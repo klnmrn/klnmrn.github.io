@@ -98,7 +98,7 @@
 									<li class="project-item">
 										<a href="#touristarrivals">
 											<h3 class="project-title">Forecasting Tourist Arrivals</h3>
-											<img src="project3.jpg" alt="Forecasting Tourist Arrivals">
+											<img src="images\tourist_arrivals.png" alt="Forecasting Tourist Arrivals">
 										</a>
 									</li>			
 
@@ -160,7 +160,7 @@
 												The idea of this online challenge is to create maps based around different themes each day of November using the hashtag <b>#30DayMapChallenge</b>. There are no restrictions on the tools, technologies or the data that can be used in the maps, the point is learning and sharing - that's is why I decided to give it a try and have some fun while doing so.
 												<br>
 												I mainly used the datasets that are publicly available, but I also played around with some web scraping (where possible) and the results are providing some useful insights, mainly for Italy - since that's where I live at the moment.
-												You can see some of the maps I created here below:
+												You can see one of the maps I created here below:
 												<br><br>
 												<center><figure>
 													<picture>
@@ -171,7 +171,7 @@
 												<br>
 												<b>Read more</b>
 												<br>
-												The source code for and all the other maps I created are hosted on <a href="https://github.com/klnmrn/30daymapchallenge">my dedicated GitHub repo.</a> Stay tuned for the 2024 edition of this super entertaining challenge! 
+												The source code and other maps I created are hosted on <a href="https://github.com/klnmrn/30daymapchallenge">my dedicated GitHub repo.</a> Stay tuned for the 2024 edition of this super entertaining challenge! 
 											</p>
 										</div>
 									</div>
@@ -212,14 +212,25 @@
 										<div>
 											<p id="projectDescription">
 												<b>Type</b><br>
-												Public sector project: Funded by a regional public administration in Italy
+												Private sector project: Commissioned by a local Trade Union in Italy
 												<br><br>
 												<b>Description</b>
 												<br>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+												Between 2021 and 2023, I worked a lot with tourist arrivals data in Italy, performing various analyses and predictions. Two large-scale projects included the monthly analyses of mobile positioning data in one Italian region; and forecasting tourist arrivals for the Milano Cortina Olympic Games in 2026.
+												<br><br>
+												For the latter, I used a fixed-effect linear model in order to obtain the predictions of international arrivals in Lombardy region. Due to the history of an Olympic event in Piedmont region (2006), the model was first calibrated on the official international arrivals data in Piedmont region from 45 countries and during a period of 16 years, taking into consideration country-level GDP per capita, trade volumes and oil prices (including 2 dummy variables). This showed how an increase of arrivals during the Olympic Games is mainly due to international arrivals (see Fig.1).<br>
+												After calibrating the model on Piedmont data, I applied and adjusted it to the Lombardy region arrivals data obtaining a result that predicted the peek of arrivals already in 2025, the year prior to the Olympic Games in Milano Cortina.
+												<br><br>
+												<center><figure>
+													<picture>
+														<img src="images\tourist_arrivals.png" alt="Tourist Arrivals" width=100%>
+													</picture>
+													<figcaption><font size="1.8">Fig. 1. Observed Vs. Fitted Arrivals in Piedmont region</font></figcaption>
+												</figure></center>
 												<br>
 												<b>Read more</b>
 												<br>
+												Due to privacy reasons, I cannot share more details about this project.
 											</p>
 										</div>
 									</div>
